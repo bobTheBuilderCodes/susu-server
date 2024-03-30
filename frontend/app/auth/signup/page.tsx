@@ -62,18 +62,20 @@ export default function SignUp() {
             <Radio.Group onChange={onChange} value={value}>
             <label
           htmlFor={"Sign up as"}
-          className="block text-sm mb-4 leading-6 text-gray-900"
+          className="block text-sm mb-4 font-semibold leading-6 text-gray-700"
         >
           {"Sign Up As"}
         </label>
-              <Radio value={1}>Individual</Radio>
-              <Radio value={2}>Group</Radio>
+              <Radio value={1}>
+                <p className="text-lg">Individual</p>
+              </Radio>
+              <Radio value={2}>  <p className="text-lg">Group</p></Radio>
             </Radio.Group>
 
-            <AppButton title="Sign up" type="submit"  />
+            <AppButton title="Sign up" type="submit" isPrimary={true} />
           </form>
 
-          <p className="mt-10 text-center text-sm text-gray-500">
+          <p className="mt-10 text-center text-gray-500">
             Already a member?{" "}
             <Link
               href="/auth/signin"
