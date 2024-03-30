@@ -6,17 +6,17 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-indigo-700 text-white">
+    <nav className="bg-white text-gray-700 border-b-2 border-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="py-5">
-            <a href="/" className="text-white font-bold">LOGO</a>
+            <a href="/" className="text-gray-700 font-bold">LOGO</a>
           </div>
           <div className="hidden md:flex items-center space-x-1">
-            <a href="#" className="navItem hover:bg-indigo-600">Home</a>
-            <a href="#" className="navItem hover:bg-indigo-600 ">About</a>
-            <a href="#" className="navItem hover:bg-indigo-600">Services</a>
-            <a href="#" className="navItem hover:bg-indigo-600">Contact</a>
+            <a href="#" className="navItem hover:bg-gray-100">Home</a>
+            <a href="#" className="navItem hover:bg-gray-100 ">About</a>
+            <a href="#" className="navItem hover:bg-gray-100">Services</a>
+            <a href="#" className="navItem hover:bg-gray-100">Contact</a>
           </div>
           <div className="md:hidden flex items-center">
             <button onClick={() => setIsOpen(!isOpen)}>
@@ -32,10 +32,10 @@ const Navbar = () => {
         </div>
       </div>
       <div className={`md:hidden ${isOpen ? 'max-h-40' : 'max-h-0'} overflow-hidden transition-max-height duration-700 ease-in-out`}>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Home</a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">About</a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Services</a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Contact</a>
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-100">Home</a>
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-100">About</a>
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-100">Services</a>
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-100">Contact</a>
       </div>
     </nav>
   );

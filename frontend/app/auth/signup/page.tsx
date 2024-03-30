@@ -70,7 +70,7 @@ export default function SignUp() {
               <Radio value={2}>Group</Radio>
             </Radio.Group>
 
-            <AppButton title="Sign up" type="submit" />
+            <AppButton title="Sign up" type="submit"  />
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
