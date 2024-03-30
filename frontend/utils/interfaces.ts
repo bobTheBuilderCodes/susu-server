@@ -4,6 +4,7 @@ import { ChangeEvent, HTMLAttributes, ReactElement } from "react";
 export interface IButtonProps extends HTMLAttributes<HTMLButtonElement>{
     disabled? : boolean
     title: string
+    isPrimary?: boolean
     type: "submit" | "reset" | "button"
     
 }

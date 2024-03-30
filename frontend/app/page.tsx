@@ -20,12 +20,12 @@ export default function Home() {
             of using Lorem Ipsum is that it has a more-or-less normal
             distribution of letters,
           </p>
-          <div className="mt-8 flex flex-row sm:flex-row justify-center gap-4">
-            <Link href={'auth/signup'}>
-            <AppButton type="button" title="Create Account" />
+          <div className="mt-8 flex w-full px-4 flex-col sm:flex-row justify-center gap-4">
+            <Link href={'auth/signup'} className="bg-black text-center text-white p-4 rounded-lg px-12">
+            Create Account
             </Link>
-            <Link href={'auth/signin'}>
-            <AppButton type="button" title="Log in" />
+            <Link href={'auth/signin'} className="bg-white text-center text-black border-2 p-4 rounded-lg px-12">
+            Log in
             </Link>
           </div>
         </div>
