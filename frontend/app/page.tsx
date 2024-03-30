@@ -1,10 +1,12 @@
-import Image from "next/image";
-import Button from "./components/ui/Button";
-import AppButton from "./components/ui/Button";
+
+import AppButton from "../components/ui/Button";
+import Link from "next/link";
+import Navbar from "@/components/ui/Navbar";
 
 export default function Home() {
   return (
     <main className="">
+       <Navbar />
       <div className="flex-grow">
         <div className="container mx-auto px-4 py-12 flex flex-col justify-center items-center min-h-[calc(100vh-64px)]">
           <h1 className="text-4xl  sm:text-5xl leading-snug md:text-6xl lg:text-7xl font-black  text-center text-[#101828] mb-4">
@@ -19,8 +21,12 @@ export default function Home() {
             distribution of letters,
           </p>
           <div className="mt-8 flex flex-row sm:flex-row justify-center gap-4">
+            <Link href={'auth/signup'}>
             <AppButton type="button" title="Create Account" />
+            </Link>
+            <Link href={'auth/signin'}>
             <AppButton type="button" title="Log in" />
+            </Link>
           </div>
         </div>
       </div>

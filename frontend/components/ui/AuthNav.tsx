@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-const Navbar = () => {
+const AuthNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -10,13 +10,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="py-5">
-            <a href="#" className="text-white font-bold">LOGO</a>
+            <a href="/" className="text-white font-bold">LOGO</a>
           </div>
           <div className="hidden md:flex items-center space-x-1">
-            <a href="#" className="py-5 px-3">Home</a>
-            <a href="#" className="py-5 px-3">About</a>
-            <a href="#" className="py-5 px-3">Services</a>
-            <a href="#" className="py-5 px-3">Contact</a>
+          <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Contact Admin</a>
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Send Us Email</a>
           </div>
           <div className="md:hidden flex items-center">
             <button onClick={() => setIsOpen(!isOpen)}>
@@ -32,13 +30,12 @@ const Navbar = () => {
         </div>
       </div>
       <div className={`md:hidden ${isOpen ? 'max-h-40' : 'max-h-0'} overflow-hidden transition-max-height duration-700 ease-in-out`}>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Home</a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">About</a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Services</a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Contact</a>
+        
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Contact Admin</a>
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Send Us Email</a>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default AuthNavbar;

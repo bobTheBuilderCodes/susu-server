@@ -1,4 +1,4 @@
-import { IButtonProps } from "@/app/utils/interfaces";
+import { IButtonProps } from "@/utils/interfaces";
 
 const AppButton = ({
   title,
