@@ -19,8 +19,8 @@ export default function Home() {
             distribution of letters,
           </p>
           <div className="mt-8 flex flex-row sm:flex-row justify-center gap-4">
-            <AppButton title="Create Account" />
-            <AppButton title="Log in" />
+            <AppButton type="button" title="Create Account" />
+            <AppButton type="button" title="Log in" />
           </div>
         </div>
       </div>
