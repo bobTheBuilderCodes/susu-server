@@ -1,69 +1,41 @@
-"use client";
+"use client"
 
-import React, { useState, useRef, useEffect } from "react";
-import { FaBars } from "react-icons/fa";
+import React, { useState } from 'react';
 
-import { links, social } from "@/app/resources/data";
-
-const Navbar: React.FC = () => {
-  const [showLinks, setShowLinks] = useState<boolean>(false);
-  const linksContainerRef = useRef<HTMLDivElement>(null);
-  const linksRef = useRef<HTMLUListElement>(null);
-
-  const toggleLinks = () => {
-    setShowLinks(!showLinks);
-  };
-
-  useEffect(() => {
-    const linksHeight = linksRef.current!.getBoundingClientRect().height;
-    if (showLinks) {
-      linksContainerRef.current!.style.height = `${linksHeight}px`;
-    } else {
-      linksContainerRef.current!.style.height = "0px";
-    }
-  }, [showLinks]);
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav>
-      <div className="nav-center">
-        <div className="nav-header">
-          <img
-            src={
-              "https://www.ghanayello.com/img/gh/c/1591020094-98-cube-robotics-limited.jpg"
-            }
-            className="logo"
-            alt="logo"
-            height={50}
-            width={50}
-          />
-          <button className="nav-toggle" onClick={toggleLinks}>
-            <FaBars />
-          </button>
+    <nav className="bg-indigo-700 text-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-between items-center">
+          <div className="py-5">
+            <a href="#" className="text-white font-bold">LOGO</a>
+          </div>
+          <div className="hidden md:flex items-center space-x-1">
+            <a href="#" className="py-5 px-3">Home</a>
+            <a href="#" className="py-5 px-3">About</a>
+            <a href="#" className="py-5 px-3">Services</a>
+            <a href="#" className="py-5 px-3">Contact</a>
+          </div>
+          <div className="md:hidden flex items-center">
+            <button onClick={() => setIsOpen(!isOpen)}>
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                {isOpen ? (
+                  <path d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
-        <div className="links-container" ref={linksContainerRef}>
-          <ul className="links" ref={linksRef}>
-            {links.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <a href={url}>{text}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        {/* <ul className="social-icons">
-          {social.map((socialIcon) => {
-            const { id, url, icon: Icon } = socialIcon;
-            return (
-              <li key={id}>
-                <a href={url}>
-                  <Icon />
-                </a>
-              </li>
-            );
-          })}
-        </ul> */}
+      </div>
+      <div className={`md:hidden ${isOpen ? 'max-h-40' : 'max-h-0'} overflow-hidden transition-max-height duration-700 ease-in-out`}>
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Home</a>
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">About</a>
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Services</a>
+        <a href="#" className="block py-2 px-4 text-sm hover:bg-indigo-600">Contact</a>
       </div>
     </nav>
   );
