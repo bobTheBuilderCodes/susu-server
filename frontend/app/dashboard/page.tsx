@@ -1,69 +1,16 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import { Button, Drawer } from 'antd';
-import AppButton from '@/components/ui/Button';
+import AppButton from '@/components/ui/Button'
+import Link from 'next/link'
+import React from 'react'
 
-const App: React.FC = () => {
-  const [open, setOpen] = useState(false);
-  const [placement, setPlacement] = useState<'bottom' | 'right'>('right');
-
-  // Determine the drawer placement based on the screen width
-  useEffect(() => {
-    const updatePlacement = () => {
-      if (window.innerWidth < 768) { // Assuming 768px is the breakpoint for mobile devices
-        setPlacement('bottom');
-      } else {
-        setPlacement('right');
-      }
-    };
-
-    updatePlacement(); // Update placement on component mount
-    window.addEventListener('resize', updatePlacement); // Update placement on window resize
-
-    // Cleanup event listener
-    return () => window.removeEventListener('resize', updatePlacement);
-  }, []);
-
-  const showDrawer = () => {
-    setOpen(true);
-  };
-
-  const onClose = () => {
-    setOpen(false);
-  };
-
+const Home = () => {
   return (
-    <div style={{ position: 'relative', height: '100vh' }}>
-      <Button size='large'
-        type="primary"
-        onClick={showDrawer} 
-        style={{
-          position: 'absolute',
-          bottom: '20px',
-          right: '20px',
-        }}
-      >
-        Create New Group
-      </Button>
-      
-      <Drawer
-        title="Hello there!"
-        placement={placement}
-        width={500}
-        onClose={onClose}
-        open={open}
-        extra={
-          <Button type="primary" onClick={onClose}>
-            Close
-          </Button>
-        }
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Drawer>
-    </div>
-  );
-};
+    <div className='flex bg-gray-100 justify-center items-center flex-col h-screen'>
+      <h1 className='text-2xl font-bold text-gray-700'>Welcome to SUSU APP</h1>
+      <p>Philomena Potinge 🚀 </p>
 
-export default App;
+      <Link href={'/'} className='bg-black text-white mt-8 py-5 rounded-lg px-12'>Back to Home Page</Link>
+    </div>
+  )
+}
+
+export default Home
