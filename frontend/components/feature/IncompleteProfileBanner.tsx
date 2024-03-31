@@ -6,7 +6,7 @@ interface IncompleteInfoBanner {
 
 const IncompleteProfileBanner: React.FC<IncompleteInfoBanner> = ({ body }) => {
   return (
-    <div className="p-4 max-w-sm w-full text-yellow-900 bg-yellow-100">
+    <div className="p-4 w-full text-yellow-900 bg-yellow-100">
       <div className="flex items-start">
         <div className="text-lg mr-2">🔔</div>
         <div className="flex-1">
