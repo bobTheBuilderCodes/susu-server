@@ -18,6 +18,7 @@ const UserGroup: React.FC<UserGroupProps> = ({ title, body, numberOfParticipants
           <p className="text-xs text-gray-600">{numberOfParticipants} participants</p>
         </div>
       </div>
+      
     </Link>
   );
 };
