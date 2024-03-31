@@ -27,7 +27,7 @@ export default function Home() {
             <Link href={'auth/signin'} className="bg-white text-center text-black border-2 p-4 rounded-lg px-12">
             Log in
             </Link>
-            <Link href={'dashboard'} className="bg-white text-center text-black border-2 p-4 rounded-lg px-12">
+            <Link href={'dashboard/home'} className="bg-white text-center text-black border-2 p-4 rounded-lg px-12">
             Test Dashboard
             </Link>
           </div>
