@@ -5,7 +5,7 @@ import React from 'react'
 
 const NotificationsTab = () => {
   return (
-    <div className='flex bg-gray-100 justify-start items-center flex-col h-screen'>
+    <div className='flex bg-gray-100 justify-start items-center flex-col pb-24'>
 
       <Notification title="New Message" body="You have received a new message from Jane Doe." />
       <Notification title="New Message" body="You have received a new message from Jane Doe." />
@@ -16,7 +16,6 @@ const NotificationsTab = () => {
       <Notification title="New Message" body="You have received a new message from Jane Doe." />
       <Notification title="New Message" body="You have received a new message from Jane Doe." />
 
-      <Link href={'/'} className='bg-black text-white mt-8 py-5 rounded-lg px-12'>Back to Home Page</Link>
     </div>
   )
 }
