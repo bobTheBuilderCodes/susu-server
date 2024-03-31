@@ -6,7 +6,7 @@ interface RecentSearchProps {
 
 const RecentSearch: React.FC<RecentSearchProps> = ({ title }) => {
   return (
-    <div className="mt-4 p-4 max-w-sm w-full border-b-2 border-gray-200">
+    <div className="mt-4 py-4 max-w-sm w-full border-b-2 border-gray-200">
       <div className="flex items-start">
         <div className="flex-1">
           <p className="text-md font-medium text-gray-800">{title}</p>
