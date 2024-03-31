@@ -1,9 +1,9 @@
 "use client"
+
 import React, { useState, useEffect } from 'react';
 import { Button, Drawer } from 'antd';
-import AppButton from '@/components/ui/Button';
 
-const App: React.FC = () => {
+const CreateGroupDrawer: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState<'bottom' | 'right'>('right');
 
@@ -33,13 +33,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <div style={{ position: 'relative', height: '100vh' }}>
+    <div style={{ position: 'relative', height: '100%' }}>
       <Button size='large'
         type="primary"
         onClick={showDrawer} 
         style={{
-          position: 'absolute',
-          bottom: '20px',
+          position: 'fixed',
+          bottom: '100px',
           right: '20px',
         }}
       >
@@ -47,9 +47,9 @@ const App: React.FC = () => {
       </Button>
       
       <Drawer
-        title="Hello there!"
+        title="Create New Group"
         placement={placement}
-        width={500}
+        width={500} height={"100%"}
         onClose={onClose}
         open={open}
         extra={
@@ -66,4 +66,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default CreateGroupDrawer;

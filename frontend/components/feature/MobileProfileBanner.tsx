@@ -14,7 +14,7 @@ const Profile: React.FC<ProfileProps> = ({ name, email, imageUrl }) => {
     <div className="bg-gray-200 py-12 px-6 w-full top-0 left-0 z-10">
       <div className="flex justify-start items-start space-x-4">
       {/* https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg */}
-      <Avatar style={{ backgroundColor: '#111', minHeight: 80 , minWidth: 90, border: "none" }} icon={<UserOutlined />} size={90} src="https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg"/>
+      <Avatar style={{ backgroundColor: '#555', minHeight: 80 , minWidth: 90, border: "none" }} icon={<UserOutlined />} size={90} src="https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg"/>
         <div className=''>
           <p className="text-lg font-semibold">{name}</p>
           <p className="text-sm text-gray-600">{email}</p>

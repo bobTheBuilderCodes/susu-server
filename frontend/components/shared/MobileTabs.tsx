@@ -17,7 +17,7 @@ const NavigationTabs= () => {
   ];
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white text-gray-800 shadow-lg border-t-2 border-gray-100">
+    <div className="md:hidden fixed bottom-0  left-0 right-0 bg-white text-gray-800 shadow-lg border-t-2 border-gray-100">
       <div className="flex justify-around">
         {tabs.map(tab => (
           <Link href={`/dashboard/${tab.id}`}
@@ -25,7 +25,7 @@ const NavigationTabs= () => {
             className={  `flex-1 p-2 ${activeTab(`/dashboard/${tab.id}`) ? 'bg-gray-200 font-semibold' : 'bg-white'}`}
            
           >
-            <div className="text-center">
+            <div className="text-center py-3">
               <div>{tab.icon}</div>
               <div className="text-sm">{tab.label}</div>
             </div>
