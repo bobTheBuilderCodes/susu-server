@@ -1,10 +1,14 @@
 "use client"
-
 import Link from 'next/link';
-import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
+
+import React, {  useState } from 'react';
 
 const NavigationTabs= () => {
   const [selectedTab, setSelectedTab] = useState('home');
+ const pathname = usePathname()
+
+  const activeTab = path => path === pathname
   const tabs = [
     { id: 'home', icon: '🏠', label: 'Home' },
     { id: 'search', icon: '🔍', label: 'Search' },
@@ -18,8 +22,8 @@ const NavigationTabs= () => {
         {tabs.map(tab => (
           <Link href={`/dashboard/${tab.id}`}
             key={tab.id}
-            className={`flex-1 p-2 ${selectedTab === tab.id ? 'bg-gray-200 font-semibold' : 'bg-white'}`}
-            onClick={() => setSelectedTab(tab.id)}
+            className={  `flex-1 p-2 ${activeTab(`/dashboard/${tab.id}`) ? 'bg-gray-200 font-semibold' : 'bg-white'}`}
+           
           >
             <div className="text-center">
               <div>{tab.icon}</div>
