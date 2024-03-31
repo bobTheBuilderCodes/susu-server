@@ -29,42 +29,42 @@ const HomeTab = () => {
       <h1 className="font-bold text-lg text-gray-700 mt-4">Your Groups (12)</h1>
       <div className="flex flex-wrap justify-start sm:mx-3">
         <UserGroup
-          title="Men of Vision"
+          title="Visionaries"
           body="Group of 4 people who are selfless and willing to help each other to realise our goals and aspirations."
           numberOfParticipants={"5"}
         />
         <UserGroup
-          title="Savers of Savings"
+          title="Savers"
           body="Group of 4 people who are selfless and willing to help each other to realise our goals and aspirations."
           numberOfParticipants={"12"}
         />
         <UserGroup
-          title="Group of Real Men"
+          title="Architects"
           body="Group of 4 people who are selfless and willing to help each other to realise our goals and aspirations."
           numberOfParticipants={"7"}
         />
         <UserGroup
-          title="Black Squadron"
+          title="Squadron"
           body="Group of 4 people who are selfless and willing to help each other to realise our goals and aspirations."
           numberOfParticipants={"7"}
         />
         <UserGroup
-          title="Black Squadron"
+          title="Black"
           body="Group of 4 people who are selfless and willing to help each other to realise our goals and aspirations."
           numberOfParticipants={"11"}
         />
         <UserGroup
-          title="The Articulate Men"
+          title="Articulates"
           body="Group of 4 people who are selfless and willing to help each other to realise our goals and aspirations."
           numberOfParticipants={"9"}
         />
         <UserGroup
-          title="Feminist Ladies"
+          title="Feminists"
           body="Group of 4 people who are selfless and willing to help each other to realise our goals and aspirations."
           numberOfParticipants={"5"}
         />
         <UserGroup
-          title="Black Squadron"
+          title="Snipers"
           body="Group of 4 people who are selfless and willing to help each other to realise our goals and aspirations."
           numberOfParticipants={"17"}
         />
