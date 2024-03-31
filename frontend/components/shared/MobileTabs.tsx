@@ -8,7 +8,7 @@ const NavigationTabs= () => {
   const [selectedTab, setSelectedTab] = useState('home');
  const pathname = usePathname()
 
-  const activeTab = path => path === pathname
+  const activeTab = (path:string) => path === pathname
   const tabs = [
     { id: 'home', icon: '🏠', label: 'Home' },
     { id: 'search', icon: '🔍', label: 'Search' },
