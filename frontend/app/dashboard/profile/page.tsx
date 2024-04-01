@@ -11,10 +11,12 @@ const ProfileTab = () => {
      
       <Profile name="Philomena Potinge" email="philomena@gmail.com" imageUrl="/path/to/image.jpg" />
       <IncompleteProfileBanner body='Your profile is not complete. Update your profile so you will be trusted by other people' />
-      <ProfileAccordion title='Personal Info'  body='Manage your personal information'/>
-      <ProfileAccordion title='My Transactions'  body='Keep track of all transactions here'/>
-      <ProfileAccordion title='My Rewards'  body='All rewards are kept safe here'/>
-      <ProfileAccordion title='My Cards'  body='Manage your visa and master cards'/>
+      
+      <ProfileAccordion slug='/dashboard/profile/personal-info' title='Personal Info'  body='Manage your personal information'/>
+      
+      <ProfileAccordion slug='/dashboard/profile/transactions' title='My Transactions'  body='Keep track of all transactions here'/>
+      <ProfileAccordion slug='/dashboard/profile/rewards' title='My Rewards'  body='All rewards are kept safe here'/>
+      <ProfileAccordion slug='/dashboard/profile/cards' title='My Cards'  body='Manage your visa and master cards'/>
       <Link className='mt-6 bg-red-50 text-red-500 p-3 px-12 rounded-lg font-semibold' href={'/'}>Log out</Link>
     </div>
   )
